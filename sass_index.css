@@ -1,0 +1,39 @@
+html {
+  font-size: 16px;
+}
+
+/* MOBILE DESIGN */
+.btns, .content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btns {
+  background-color: #12a661;
+}
+
+.btns > button {
+  width: 30%;
+  height: auto;
+  background-color: yellow;
+  font-size: 2.5rem;
+}
+
+.content {
+  background-color: #3150c3;
+  margin-top: 5%;
+}
+
+.content input[type=text] {
+  width: 70%;
+  font-size: 4rem;
+}
+
+.content input[type=checkbox] {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=sass_index.css.map */
