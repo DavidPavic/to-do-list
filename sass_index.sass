@@ -7,7 +7,7 @@ html
     width: 30%
     height: auto
     background-color: yellow
-    font-size: 2.5rem
+    font-size: 3rem
 
 /* MOBILE DESIGN */
 
@@ -26,6 +26,7 @@ html
     @include btn-design
 
 .content 
+    margin-top: 5%
     background-color: colors.$secondary-color
     flex-direction: column
     justify-content: space-evenly
@@ -39,10 +40,16 @@ html
     justify-content: space-evenly
     align-items: center
 
-.content .task input[type="text"]
+.task .rmvBtn, .task .check
+    width: 70px
+    height: 70px
+
+.task .rmvBtn
+    background-color: white
+    border-radius: 50%
+    font-size: 2.5rem
+    font-weight: bold
+
+.txt
     width: 70%
     font-size: 4rem
-
-.content .task input[type="checkbox"]
-    width: 50px
-    height: 50px 
