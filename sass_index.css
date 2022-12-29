@@ -2,6 +2,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: white;
+}
+
 /* MOBILE DESIGN */
 .btns, .content {
   width: 100%;
@@ -10,34 +14,42 @@ html {
 }
 
 .btns {
-  background-color: #12a661;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .btns > button {
-  width: 30%;
+  width: 45%;
   height: auto;
-  background-color: yellow;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding: 2%;
+  background-color: MediumSeaGreen;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 0px 15px white;
 }
 
 .content {
-  margin-top: 5%;
-  background-color: #3150c3;
+  margin-top: 10%;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .task {
-  width: 100%;
+  width: 95%;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  padding: 2% 0%;
+  background-color: gray;
+  border-radius: 70px;
+  box-shadow: 0px 0px 15px white;
 }
 
 .task .rmvBtn, .task .check {
@@ -46,13 +58,47 @@ html {
 }
 
 .task .rmvBtn {
-  background-color: white;
+  background-color: red;
+  color: white;
   border-radius: 50%;
   font-size: 2.5rem;
   font-weight: bold;
+  box-shadow: 0px 0px 10px LightGray;
+  border: solid 1px red;
 }
 
-.txt {
+.task .check {
+  accent-color: MediumSeaGreen;
+}
+
+.task .txt {
   width: 70%;
   font-size: 4rem;
+  border: none;
+  border-bottom: solid 1px LightGray;
+  outline: none;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: gray;
+  color: white;
+}
+
+::-moz-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+/* DARK MODE TOGGLE */
+.dark-mode {
+  background-color: #202020;
 }/*# sourceMappingURL=sass_index.css.map */

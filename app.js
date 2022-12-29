@@ -1,5 +1,5 @@
 const addBtn = document.getElementById("addBtn");
-const bgChangeBtn = document.getElementById("bgChange");
+const bgBtn = document.getElementById("bgBtn");
 
 const content = document.getElementById("tasks");
 
@@ -28,7 +28,45 @@ function Functionality() {
 
     rmvBtn.addEventListener('click', function() {
         rmvBtn.parentNode.style.display = "none";
+    }); 
+
+    container.addEventListener("focusin", function() {
+        container.style.backgroundColor = "orange";
+        text.style.backgroundColor = "orange";
+        text.style.borderBottomColor = "white";
+    });
+    container.addEventListener("focusout", function() {
+        if(text.value && checkbox.checked) {
+            container.style.backgroundColor = "MediumSeaGreen";
+            text.style.backgroundColor = "MediumSeaGreen";
+            rmvBtn.style.backgroundColor = "white";
+            rmvBtn.style.color = "gray";
+            rmvBtn.style.boxShadow = "0px 0px 10px gray";
+            rmvBtn.style.border = "none";
+            text.style.borderBottomColor = "white";
+        }
+        else if (!text.value && !checkbox.checked) {
+            container.style.backgroundColor = "gray";
+            text.style.backgroundColor = "gray";
+            text.style.borderBottomColor = "white";
+        }
+        else if (!text.value || !checkbox.checked) {
+            container.style.backgroundColor = "Tomato";
+            text.style.backgroundColor = "Tomato";
+            rmvBtn.style.backgroundColor = "white";
+            rmvBtn.style.color = "gray";
+            rmvBtn.style.boxShadow = "0px 0px 10px gray";
+            rmvBtn.style.border = "none";
+            text.style.borderBottomColor = "white";
+        }   
     });
 }
 
+function DarkLightMode() {
+    const body = document.body;
+
+    body.classList.toggle("dark-mode");
+}
+
 addBtn.addEventListener('click', Functionality);
+bgBtn.addEventListener('click', DarkLightMode);
