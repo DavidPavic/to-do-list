@@ -37,29 +37,41 @@ function Functionality() {
     });
     container.addEventListener("focusout", function() {
         if(text.value && checkbox.checked) {
-            container.style.backgroundColor = "MediumSeaGreen";
-            text.style.backgroundColor = "MediumSeaGreen";
-            rmvBtn.style.backgroundColor = "white";
-            rmvBtn.style.color = "gray";
-            rmvBtn.style.boxShadow = "0px 0px 10px gray";
-            rmvBtn.style.border = "none";
-            text.style.borderBottomColor = "white";
+            CorrectInput(container, text, rmvBtn);
         }
         else if (!text.value && !checkbox.checked) {
-            container.style.backgroundColor = "gray";
-            text.style.backgroundColor = "gray";
-            text.style.borderBottomColor = "white";
+            DefaultInput(container, text);
         }
         else if (!text.value || !checkbox.checked) {
-            container.style.backgroundColor = "Tomato";
-            text.style.backgroundColor = "Tomato";
-            rmvBtn.style.backgroundColor = "white";
-            rmvBtn.style.color = "gray";
-            rmvBtn.style.boxShadow = "0px 0px 10px gray";
-            rmvBtn.style.border = "none";
-            text.style.borderBottomColor = "white";
+            IncorrectInput(container, text, rmvBtn);
         }   
     });
+}
+
+function CorrectInput(container, text, rmvBtn) {
+    container.style.backgroundColor = "MediumSeaGreen";
+    text.style.backgroundColor = "MediumSeaGreen";
+    rmvBtn.style.backgroundColor = "white";
+    rmvBtn.style.color = "gray";
+    rmvBtn.style.boxShadow = "0px 0px 10px gray";
+    rmvBtn.style.border = "none";
+    text.style.borderBottomColor = "white";
+}
+
+function DefaultInput(container, text) {
+    container.style.backgroundColor = "gray";
+    text.style.backgroundColor = "gray";
+    text.style.borderBottomColor = "white";
+}
+
+function IncorrectInput(container, text, rmvBtn) {
+    container.style.backgroundColor = "Tomato";
+    text.style.backgroundColor = "Tomato";
+    rmvBtn.style.backgroundColor = "white";
+    rmvBtn.style.color = "gray";
+    rmvBtn.style.boxShadow = "0px 0px 10px gray";
+    rmvBtn.style.border = "none";
+    text.style.borderBottomColor = "white";
 }
 
 function DarkLightMode() {
